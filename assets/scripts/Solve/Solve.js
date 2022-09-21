@@ -9,6 +9,7 @@ const sleep = (millisecond) => {
 async function Solve(solution) {
     // let solution = ['T', 'R', 'B']
     let init = 0
+    refreshState()
     console.log('State ', state);
 
     let i = 0
@@ -86,6 +87,7 @@ async function Solve(solution) {
         await sleep(1000)
             // await sleep(2000);
     }
+    refreshState()
 }
 
 // Solve()

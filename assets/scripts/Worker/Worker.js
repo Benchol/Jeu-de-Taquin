@@ -104,14 +104,6 @@ function bfs(node) {
                 let goals = []
                 goals.push(child)
                 while (true) {
-                    // path.forEach(element => {
-                    //     console.log(element.getId(), child.getIdParent());
-                    //     if (child.getIdParent() === element.getId()) {
-                    //         goals.push(element)
-                    //         child = element
-                    //         console.log('Element path : ', child);
-                    //     }
-                    // })
 
                     let p = path.find(el => {
                         if (el.getId() === child.getIdParent()) {

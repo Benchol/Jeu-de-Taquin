@@ -29,6 +29,6 @@ solvebtn.addEventListener('click', () => {
     }
 })
 
-shuffle.addEventListener('click', () => {
-
+shuffle.addEventListener('click', async() => {
+    await shuffle_func()
 })
