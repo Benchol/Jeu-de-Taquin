@@ -1,0 +1,97 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: aqua; */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#container {
+    width: 720px;
+    height: 420px;
+    /* border: 1px solid black; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+    position: relative;
+    margin: 50px;
+    /* border: 1px solid black; */
+}
+
+.btn {
+    padding: 10px 50px;
+    background-color: aqua;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.box {
+    width: calc(100%/3);
+    height: calc(100%/3);
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    transition: all .3s;
+    margin: 2px;
+}
+
+.special {
+    border-color: blue;
+}
+
+.b-0-0 {
+    /* background-image: url('../images/1.jpeg'); */
+    transform: translateX(calc(0%)) translateY(calc(0%)) !important;
+}
+
+.b-0-1 {
+    /* background-image: url('../images/2.jpeg'); */
+    transform: translateX(calc(100%)) translateY(calc(0%)) !important;
+}
+
+.b-0-2 {
+    /* background-image: url('../images/3.jpeg'); */
+    transform: translateX(calc(200%)) translateY(calc(0%)) !important;
+}
+
+.b-1-0 {
+    /* background-image: url('../images/4.jpeg'); */
+    transform: translateX(calc(0%)) translateY(calc(100%)) !important;
+}
+
+.b-1-1 {
+    /* background-image: url('../images/5.jpeg'); */
+    transform: translateX(calc(100%)) translateY(calc(100%)) !important;
+}
+
+.b-1-2 {
+    /* background-image: url('../images/6.jpeg'); */
+    transform: translateX(calc(200%)) translateY(calc(100%)) !important;
+}
+
+.b-2-0 {
+    /* background-image: url('../images/7.jpeg'); */
+    transform: translateX(calc(0%)) translateY(calc(200%)) !important;
+}
+
+.b-2-1 {
+    /* background-image: url('../images/8.jpeg'); */
+    transform: translateX(calc(100%)) translateY(calc(200%)) !important;
+}
+
+.b-2-2 {
+    /* background-image: url('../images/9.jpeg'); */
+    transform: translateX(calc(200%)) translateY(calc(200%)) !important;
+}
