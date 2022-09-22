@@ -10,7 +10,8 @@ async function Solve(solution) {
     // let solution = ['T', 'R', 'B']
     let init = 0
     refreshState()
-    console.log('State ', state);
+    console.log('State ', solution.length);
+    nbre_step.innerHTML = solution.length - 1
 
     let i = 0
     let j = 0

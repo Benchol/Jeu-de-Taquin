@@ -1,4 +1,5 @@
 let container = document.querySelector('#container');
+let nbre_step = document.querySelector('.numberofstep')
 
 // let p = 1;
 let state = new State();
@@ -16,15 +17,14 @@ let state = new State();
 // }
 // console.log('sstatta : ', state.getState());
 state.setState(0, 0, 1)
-state.setState(0, 1, 3)
-state.setState(0, 2, 6)
-state.setState(1, 0, 7)
-state.setState(1, 1, 4)
-state.setState(1, 2, 8)
-state.setState(2, 0, 2)
-state.setState(2, 1, 5)
+state.setState(0, 1, 2)
+state.setState(0, 2, 3)
+state.setState(1, 0, 4)
+state.setState(1, 1, 5)
+state.setState(1, 2, 6)
+state.setState(2, 0, 7)
+state.setState(2, 1, 8)
 state.setState(2, 2, 0)
-
 
 let domHtml = "";
 for (let i = 0; i < 3; i++) {
@@ -112,13 +112,13 @@ function move() {
 }
 
 let shuffle_func = async(deplacement) => {
-    deplacement = []
+    nbre_step.innerHTML = 0
     return new Promise((resolve) => {
         let time_count = 0
         window.setInterval(() => {
             if (time_count == 50) {
                 // alert('caca')
-                resolve(deplacement);
+                resolve();
                 return 0
             }
 
@@ -140,9 +140,6 @@ let shuffle_func = async(deplacement) => {
             let box_none = document.querySelector(`.b-${i}-${j}`);
             let box_none_classname = box_none.classList[1];
             let box_name = box.classList[1];
-            console.log(box_name);
-
-            // console.log('Name: ', box_name);
             box.classList.add(box_none_classname);
             box.classList.remove(box_name);
             box_none.classList.add(box_name);
@@ -151,13 +148,8 @@ let shuffle_func = async(deplacement) => {
 
             time_count++;
         }, 200);
-
-        console.log('dee : ', deplacement[0]);
-        console.log('First push', deplacement);
-        // resolve(deplacement)
     }).then((depl) => {
-        console.log('DE : ', deplacement[49]);
-        resultat = depl
+        // resultat = depl
     })
 }
 
